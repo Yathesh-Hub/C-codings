@@ -1,47 +1,15 @@
 #include <stdio.h>
-int main() {
-    float n1, n2, result;
-    char operation;
+int main()
+{
+    int num1,num2;
+    printf("Enter a number:");
+    scanf("%d\n%d",&num1,&num2);
 
-    printf("Enter two numbers: ");
-    scanf("%f %f", &n1, &n2);
+    printf("Addition:%d\n",num1+num2);
+    printf("Subraction:%d\n",num1-num2);
+    printf("Multiplication:%d\n",num1*num2);
+    printf("Division:%d\n",num1/num2);
+    printf("Modulus:%d\n",num1%num2);
+    printf("Square of the numbers:%d\n%d",%2d,num2*2);
 
-    printf("Choose operation :");
-    scanf(" %c", &operation);
-
-    switch(operation) {
-        case '+':
-            result = n1 + n2;
-            printf("Addition result: %.2f\n", result);
-            break;
-        case '-':
-            result = n1-n2;
-            printf("Subtraction result: %.2f\n", result);
-            break;
-        case '*':
-            result = n1*n2;
-            printf("Multiplication result: %.2f\n", result);
-            break;
-        case '/':
-            if (n2 != 0) {
-                result = n1/n2;
-                printf("Division result: %.2f\n", result);
-            } else {
-                printf("Cannot divide by zero.\n");
-            }
-            break;
-        case '%':
-            result = (int)n1%(int)n2;
-            printf("Modulus result: %.2f\n", result);
-            break;
-        case '^':
-            result = n1*n1;
-            printf("Square of %f is %.2f\n", n1, result);
-            break;
-        default:
-            printf("Invalid operation.\n");
     }
-
-    return 0;
-}
-
